@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 55px;
+  font-size: 70px;
   margin: 0;
 }
 
@@ -84,4 +84,16 @@ button {
 
 button:hover {
   background-color: #eeeeee;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 45px;
+  }
 }
