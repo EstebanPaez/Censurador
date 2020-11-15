@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Minipax";
+  src: url("Minipax-Regular.woff") format("woff"),
+    url("Minipax-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Minipax";
+  src: url("Minipax-Bold.woff") format("woff"),
+    url("Minipax-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
