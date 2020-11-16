@@ -69,24 +69,6 @@ img {
   text-align: center;
 }
 
-.flags-label {
-  margin: 20px 0;
-}
-
-.flags-Container {
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.forSplitInput {
-  text-align: center;
-  width: 30px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 2px;
-}
-
 .label-words {
   margin-top: 20px;
 }
@@ -183,11 +165,13 @@ button:hover {
 
 .stat-title {
   margin-top: 0;
+  margin-bottom: 5px;
   width: 80%;
 }
 
 .stat-info {
   font-family: monospace;
+  margin-bottom: 25px;
 }
 
 @media screen and (max-width: 769px) {
