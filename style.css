@@ -42,7 +42,7 @@ h3 {
   font-size: 20px;
 }
 
-label {
+.semi-title {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -55,18 +55,36 @@ img {
 
 .text {
   margin-top: 10px;
-  width: 57vw;
+  width: 56vw;
   height: 180px;
   padding: 30px;
   font-size: 18px;
 }
 
 .text-words {
-  width: 57vw;
+  width: 56vw;
   height: 100px;
   padding: 10px;
   font-size: 18px;
   text-align: center;
+}
+
+.flags-label {
+  margin: 20px 0;
+}
+
+.flags-Container {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forSplitInput {
+  text-align: center;
+  width: 30px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 
 .label-words {
@@ -143,12 +161,33 @@ button:hover {
   box-shadow: 0px 0px 26px 8px rgba(217, 217, 217, 1);
 }
 
+.statsyresult {
+  width: 90%;
+  display: flex;
+}
+
+.stats {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .clear {
   position: absolute;
   right: 10px;
   top: 10px;
   font-size: 45px;
   cursor: pointer;
+}
+
+.stat-title {
+  margin-top: 0;
+  width: 80%;
+}
+
+.stat-info {
+  font-family: monospace;
 }
 
 @media screen and (max-width: 769px) {
@@ -158,6 +197,10 @@ button:hover {
 
   .clear {
     font-size: 35px;
+  }
+
+  .text-result-container {
+    width: 94vw;
   }
 }
 
@@ -172,7 +215,7 @@ button:hover {
   }
 
   .text-result-container {
-    width: 90vw;
+    width: 94vw;
     height: 500px;
   }
 
