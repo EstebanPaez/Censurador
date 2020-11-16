@@ -1,7 +1,22 @@
 body {
-  font-family: "Minipax", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   text-align: center;
-  padding: 5px;
+  padding: 3px;
+}
+
+body.fixed {
+  overflow-y: hidden;
+}
+
+.up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-size: 55px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
 }
 
 .container {
@@ -17,8 +32,9 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 70px;
+  font-size: 100px;
   margin: 0;
+  margin-top: 30px;
 }
 
 h3 {
@@ -40,14 +56,14 @@ img {
 .text {
   margin-top: 10px;
   width: 57vw;
-  height: 150px;
+  height: 180px;
   padding: 30px;
   font-size: 18px;
 }
 
 .text-words {
-  width: 40vw;
-  height: 28px;
+  width: 57vw;
+  height: 100px;
   padding: 10px;
   font-size: 18px;
   text-align: center;
@@ -58,26 +74,35 @@ img {
 }
 
 .result-label {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
 .text-result {
+  text-align: start;
   width: 55vw;
   font-size: 17px;
-  margin-bottom: 30px;
   font-family: monospace;
+  width: 60%;
+  border: 1px solid #aaa;
+  padding: 20px;
+  height: 300px;
+  margin: 0;
+  overflow-y: scroll;
 }
 
 button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   margin: 40px;
   height: 40px;
   font-size: 16px;
   background-color: white;
   cursor: pointer;
-  font-family: "Minipax";
+  font-family: monospace;
   border: 1px solid black;
   border-radius: 20px;
 }
@@ -86,14 +111,72 @@ button:hover {
   background-color: #eeeeee;
 }
 
-@media screen and (max-width: 768px) {
+.container-result {
+  position: fixed;
+  background-color: rgba(230, 230, 230, 0.9);
+  height: 100vh;
+  width: 100vw;
+  top: -110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  transition-property: top;
+}
+
+.container-result.active {
+  top: 0;
+}
+
+.text-result-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 500px;
+  border: 1px #eeeeee solid;
+  border-radius: 15px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 26px 8px rgba(217, 217, 217, 1);
+}
+
+.clear {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
   h1 {
     font-size: 45px;
+  }
+
+  .clear {
+    font-size: 35px;
   }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 45px;
+  }
+
+  .clear {
+    right: 5px;
+    top: 5px;
+  }
+
+  .text-result-container {
+    width: 90vw;
+    height: 500px;
+  }
+
+  .result-label {
+    margin-bottom: 20px;
   }
 }
